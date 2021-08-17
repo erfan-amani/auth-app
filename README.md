@@ -1,6 +1,6 @@
 # Authentication app
 
-#### Can try live preview of app [here](https://auth-app-psi.vercel.app/signin)
+#### Try live preview of app [here](https://auth-app-psi.vercel.app/signin)
 
 This app allow you to login to your created account or create a new account.
 There is three way to do that:
