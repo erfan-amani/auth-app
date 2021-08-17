@@ -7,7 +7,7 @@ const Signup = () => {
   return (
     <Card>
       <div className="text-center space-1">
-        <h2 className="font-bold text-lg md:text-2xl xl:text-3xl text-gray-800">
+        <h2 className="font-bold text-xl md:text-2xl xl:text-3xl text-gray-800">
           Sign Up
         </h2>
         <p className="text-sm md:text-base">Create a new acount!</p>

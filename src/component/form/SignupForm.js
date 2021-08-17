@@ -79,13 +79,13 @@ const SignupForm = () => {
           value={email}
           onChange={emailChangeHandler}
           onBlur={emailBlurHandler}
-          className={`border-gray-300 border-2 text-lg p-1 pl-3 focus:outline-none focus:border-indigo-500 ${
+          className={`border-gray-300 border-2 text-base md:text-lg p-1 pl-3 focus:outline-none focus:border-indigo-500 ${
             emailHasError && 'border-red-400'
           }`}
         />
       </div>
       <div className="flex flex-col gap-1">
-        <label>Password</label>
+        <label className="text-sm md:text-base">Password</label>
         <input
           type="password"
           value={password}
@@ -97,13 +97,13 @@ const SignupForm = () => {
         />
       </div>
       <div className="flex flex-col gap-1">
-        <label>Confirm password</label>
+        <label className="text-sm md:text-base">Confirm password</label>
         <input
           type="password"
           value={confirmPassword}
           onChange={confirmPasswordChangeHandler}
           onBlur={confirmPasswordBlurHandler}
-          className={`border-gray-300 border-2 text-lg p-1 pl-3 focus:outline-none focus:border-indigo-500 mb-4 ${
+          className={`border-gray-300 border-2 text-base md:text-lg p-1 pl-3 focus:outline-none focus:border-indigo-500 mb-4 ${
             confirmPasswordHasError && 'border-red-400'
           }`}
         />
@@ -112,14 +112,14 @@ const SignupForm = () => {
         <button
           disabled={!formIsValid}
           type="submit"
-          className="bg-indigo-700 text-white py-2 w-full hover:bg-indigo-600 disabled:cursor-not-allowed"
+          className="bg-indigo-700 text-white py-2 w-full hover:bg-indigo-600 disabled:cursor-not-allowed text-sm md:text-bas"
         >
           Sign up
         </button>
       ) : (
         <LoadingSpinner />
       )}
-      <div className="text-gray-800 text-center">
+      <div className="text-gray-800 text-center text-sm md:text-bas">
         Already Have an acount ? {}
         <Link to="/signin" className="underline font-semi-bold">
           Sign in

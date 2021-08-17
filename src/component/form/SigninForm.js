@@ -66,25 +66,25 @@ const SigninForm = () => {
         </p>
       )}
       <div className="flex flex-col gap-1">
-        <label>Email</label>
+        <label className="text-sm md:text-base">Email</label>
         <input
           type="email"
           value={email}
           onChange={emailChangeHandler}
           onBlur={emailBlurHandler}
-          className={`border-gray-300 border-2 text-lg p-1 pl-3 focus:outline-none focus:border-indigo-500 ${
+          className={`border-gray-300 border-2 text-base md:text-lg p-1 pl-3 focus:outline-none focus:border-indigo-500 ${
             emailHasError && 'border-red-400'
           }`}
         />
       </div>
       <div className="flex flex-col gap-1">
-        <label>Password</label>
+        <label className="text-sm md:text-base">Password</label>
         <input
           type="password"
           value={password}
           onChange={passwordChangeHandler}
           onBlur={passwordBlurHandler}
-          className={`border-gray-300 border-2 text-lg p-1 pl-3 focus:outline-none focus:border-indigo-500 mb-4 ${
+          className={`border-gray-300 border-2 text-base md:text-lg p-1 pl-3 focus:outline-none focus:border-indigo-500 mb-4 ${
             passwordHasError && 'border-red-400'
           }`}
         />
@@ -93,7 +93,7 @@ const SigninForm = () => {
         <button
           disabled={!formIsValid}
           type="submit"
-          className="bg-indigo-700 text-white py-2 w-full hover:bg-indigo-600 disabled:cursor-not-allowed"
+          className="bg-indigo-700 text-white py-2 w-full hover:bg-indigo-600 disabled:cursor-not-allowed text-sm md:text-base"
         >
           Sign in
         </button>
@@ -103,12 +103,12 @@ const SigninForm = () => {
       <div>
         <p
           onClick={resetPasswordHandler}
-          className="cursor-pointer w-full text-center text-indigo-900"
+          className="cursor-pointer w-full text-center text-indigo-900 text-sm md:text-bas"
         >
           Forget your password ?
         </p>
 
-        <div className="text-gray-800 text-center">
+        <div className="text-gray-800 text-center text-sm md:text-bas">
           Don't have an acount ? {}
           <Link to="/signup" className="underline font-semi-bold">
             Sign up
