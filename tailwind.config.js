@@ -7,6 +7,8 @@ module.exports = {
   variants: {
     extend: {
       cursor: ['disabled'],
+      ringColor: ['active'],
+      ringWidth: ['active'],
     },
   },
   plugins: [],

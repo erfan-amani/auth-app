@@ -66,7 +66,7 @@ const SignupForm = () => {
   };
 
   return (
-    <form onSubmit={submitHandler} className="space-y-4 w-full">
+    <form onSubmit={submitHandler} className="space-y-2 w-full">
       {formError && (
         <p className="text-red-600 py-1 px-3 bg-red-200 border-red-300 border-2">
           {formError}

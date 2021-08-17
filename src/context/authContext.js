@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { createContext, useContext, useState } from 'react';
-import { auth } from '../firebase';
+import { auth, googleProvider, githubProvider } from '../firebase';
 
 const AuthContext = createContext();
 
@@ -13,6 +13,7 @@ export const AuthProvider = (props) => {
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
+      console.log(user);
       setCurrentUser(user);
     });
 
@@ -35,12 +36,38 @@ export const AuthProvider = (props) => {
     return auth.sendPasswordResetEmail(email);
   };
 
+  const signinWithGoogle = () => {
+    auth
+      .signInWithPopup(googleProvider)
+      .then(() => {
+        console.log('Successfuly signed in with google');
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+    // return auth.signInWithPopup(provider);
+  };
+
+  const signinWithGithub = () => {
+    auth
+      .signInWithPopup(githubProvider)
+      .then(() => {
+        console.log('Successfuly signed in with google');
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+    // return auth.signInWithPopup(provider);
+  };
+
   const value = {
     user: currentUser,
     signup,
     signin,
     signout,
     resetPassword,
+    signinWithGoogle,
+    signinWithGithub,
   };
 
   return (

@@ -59,7 +59,7 @@ const SigninForm = () => {
   };
 
   return (
-    <form onSubmit={submitHandler} className="space-y-4 w-full">
+    <form onSubmit={submitHandler} className="space-y-2 w-full form">
       {formError && (
         <p className="text-red-600 py-1 px-3 bg-red-200 border-red-300 border-2">
           {formError}
@@ -100,17 +100,20 @@ const SigninForm = () => {
       ) : (
         <LoadingSpinner />
       )}
-      <p
-        onClick={resetPasswordHandler}
-        className="cursor-pointer w-full text-center text-indigo-900"
-      >
-        Forget your password ?
-      </p>
-      <div className="text-gray-800 text-center">
-        Don't have an acount ? {}
-        <Link to="/signup" className="underline font-semi-bold">
-          Sign up
-        </Link>
+      <div>
+        <p
+          onClick={resetPasswordHandler}
+          className="cursor-pointer w-full text-center text-indigo-900"
+        >
+          Forget your password ?
+        </p>
+
+        <div className="text-gray-800 text-center">
+          Don't have an acount ? {}
+          <Link to="/signup" className="underline font-semi-bold">
+            Sign up
+          </Link>
+        </div>
       </div>
     </form>
   );

@@ -2,3 +2,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.line {
+  display: grid;
+  grid-template-columns: 1fr 2rem 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.line::after,
+.line::before {
+  /* padding-top: 5px; */
+  content: '';
+  /* display: flex; */
+  display: inline-block;
+  border: 2px dotted;
+  border-color: rgb(53, 15, 122) transparent transparent transparent;
+  width: 100%;
+}
